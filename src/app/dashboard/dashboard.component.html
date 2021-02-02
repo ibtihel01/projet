@@ -1,0 +1,72 @@
+<div class="col-md-3"></div>
+<div class="col-md-9" style="margin-left: -200px">
+<div class="panel panel-conta:iner"style="margin-top:35px">
+    <div class="row" >
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding"style="width: 34%">
+            <div class="panel panel-teal panel-widget border-right">
+                <div class="row no-padding"><a routerLink="/list"><img src="assets/image7.png"  alt="" style="margin-left: 5px;margin-right: 5px;width: 150px;height:100px;margin-top:4px ;" >
+                </a>
+                    <div class="large">{{sessionsNbr}}</div>
+                    <div class="text-muted">Sessions</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding"style="width: 34%">
+            <div class="panel panel-blue panel-widget border-right">
+                <div class="row no-padding"><a routerLink="/participant"><img src="assets/image3.png"  alt="" style="margin-left: 5px;margin-right: 5px;width: 150px;height:100px;margin-top:4px ;" >
+                </a><div class="large">{{participantsNbr}}</div>
+                    <div class="text-muted">participants</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding" style="width: 29%">
+            <div class="panel panel-orange panel-widget border-right">
+                <div class="row no-padding"><a routerLink="/formateur"><img src="assets/image10.png"  alt="" style="margin-left: 5px;margin-right: 5px;width: 150px;height:100px;margin-top:4px ;" >
+                </a>
+                    <div class="large">{{formateursNbr}}</div>
+                    <div class="text-muted">formateurs</div>
+                </div>
+            </div>
+        </div>
+        
+    </div><!--/.row-->
+</div>
+<div  style="display: flex">
+        <table id="keywords" cellspacing="0" cellpadding="0"style="margin-top:100px" >
+          <thead>
+            <tr>
+              <th><span>TRACK</span></th>
+              <th><span>Nombre de sessions</span></th>
+              
+            </tr>
+          </thead>
+          <tbody>
+             <tr *ngFor ="let item of tracksAndSessions">
+                <td>{{item.track}}</td>
+                <td>{{item.sessions}}</td>
+              </tr>
+          
+           
+          </tbody>
+        </table>
+       
+        <table id="keywords" cellspacing="0" cellpadding="0"style="margin-top:100px" >
+            <thead>
+              <tr>
+                <th><span>Top formateurs</span></th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor ="let item of topFormateurs">
+                <td>{{item.nom +" "+item.prenom}}</td>
+             
+              
+            </tbody>
+          </table>
+         
+
+
+    </div>
+    <div>
+    </div>
